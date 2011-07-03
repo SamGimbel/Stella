@@ -1,0 +1,41 @@
+<h1>Listing posts</h1>
+
+<table>
+  <tr>
+    <th>Id</th>
+    <th>Title</th>
+    <th>Createdate</th>
+    <th>Image</th>
+    <th>Platform</th>
+    <th>Icon</th>
+    <th>Link</th>
+    <th>Tagid</th>
+    <th>Tag</th>
+    <th>Size</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @posts.each do |post| %>
+  <tr>
+    <td><%= post.id %></td>
+    <td><%= post.title %></td>
+    <td><%= post.createdate %></td>
+    <td><%= post.image %></td>
+    <td><%= post.platform %></td>
+    <td><%= post.icon %></td>
+    <td><%= post.link %></td>
+    <td><%= post.tagid %></td>
+    <td><%= post.tag %></td>
+    <td><%= post.size %></td>
+    <td><%= link_to 'Show', post %></td>
+    <td><%= link_to 'Edit', edit_post_path(post) %></td>
+    <td><%= link_to 'Destroy', post, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Post', new_post_path %>
