@@ -1,0 +1,49 @@
+<%= form_for(@list_view) do |f| %>
+  <% if @list_view.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@list_view.errors.count, "error") %> prohibited this list_view from being saved:</h2>
+
+      <ul>
+      <% @list_view.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :postid %><br />
+    <%= f.text_field :postid %>
+  </div>
+  <div class="field">
+    <%= f.label :title %><br />
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :author %><br />
+    <%= f.text_field :author %>
+  </div>
+  <div class="field">
+    <%= f.label :createdate %><br />
+    <%= f.text_field :createdate %>
+  </div>
+  <div class="field">
+    <%= f.label :published %><br />
+    <%= f.check_box :published %>
+  </div>
+  <div class="field">
+    <%= f.label :publishdate %><br />
+    <%= f.text_field :publishdate %>
+  </div>
+  <div class="field">
+    <%= f.label :imageurl %><br />
+    <%= f.text_field :imageurl %>
+  </div>
+  <div class="field">
+    <%= f.label :iconurl %><br />
+    <%= f.text_field :iconurl %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

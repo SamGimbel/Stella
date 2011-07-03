@@ -1,0 +1,21 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  postid: 1
+  title: MyString
+  author: MyString
+  createdate: MyString
+  published: false
+  publishdate: MyString
+  imageurl: MyString
+  iconurl: MyString
+
+two:
+  postid: 1
+  title: MyString
+  author: MyString
+  createdate: MyString
+  published: false
+  publishdate: MyString
+  imageurl: MyString
+  iconurl: MyString

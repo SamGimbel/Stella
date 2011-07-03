@@ -1,4 +1,6 @@
 Stella::Application.routes.draw do
+  resources :list_views
+
   resources :users
 
   resources :posts

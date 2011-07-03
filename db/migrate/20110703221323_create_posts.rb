@@ -3,7 +3,8 @@ class CreatePosts < ActiveRecord::Migration
     create_table :posts do |t|
       t.integer :id
       t.string :title
-      t.stringpublishdate :createdate
+      t.string :publishdate 
+      t.string :createdate
       t.string :image
       t.string :platform
       t.string :icon

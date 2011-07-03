@@ -10,6 +10,43 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 0) do
+ActiveRecord::Schema.define(:version => 20110703225604) do
+
+  create_table "list_views", :force => true do |t|
+    t.integer  "postid"
+    t.string   "title"
+    t.string   "author"
+    t.string   "createdate"
+    t.boolean  "published"
+    t.string   "publishdate"
+    t.string   "imageurl"
+    t.string   "iconurl"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "posts", :force => true do |t|
+    t.string   "title"
+    t.string   "publishdate"
+    t.string   "createdate"
+    t.string   "image"
+    t.string   "platform"
+    t.string   "icon"
+    t.string   "link"
+    t.integer  "tagid"
+    t.string   "tag"
+    t.string   "size"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "users", :force => true do |t|
+    t.string   "firstname"
+    t.string   "lastname"
+    t.integer  "status"
+    t.string   "lastpost"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
 end

@@ -1,0 +1,37 @@
+<h1>Listing list_views</h1>
+
+<table>
+  <tr>
+    <th>Postid</th>
+    <th>Title</th>
+    <th>Author</th>
+    <th>Createdate</th>
+    <th>Published</th>
+    <th>Publishdate</th>
+    <th>Imageurl</th>
+    <th>Iconurl</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @list_views.each do |list_view| %>
+  <tr>
+    <td><%= list_view.postid %></td>
+    <td><%= list_view.title %></td>
+    <td><%= list_view.author %></td>
+    <td><%= list_view.createdate %></td>
+    <td><%= list_view.published %></td>
+    <td><%= list_view.publishdate %></td>
+    <td><%= list_view.imageurl %></td>
+    <td><%= list_view.iconurl %></td>
+    <td><%= link_to 'Show', list_view %></td>
+    <td><%= link_to 'Edit', edit_list_view_path(list_view) %></td>
+    <td><%= link_to 'Destroy', list_view, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New List view', new_list_view_path %>
