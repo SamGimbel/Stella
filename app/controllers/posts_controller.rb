@@ -11,7 +11,7 @@ class PostsController < ApplicationController
   end
 
   # GET /posts/1
-  # GET /posts/1.xml
+  # GET /posts/3.xml
   def show
     @post = Post.find(params[:id])
 
