@@ -5,4 +5,6 @@ class Post < ActiveRecord::Base
   validates :image,       :presence => true
   validates :platform,    :presence => true
   validates :image,       :presence => true
+  
+  belongs_to :post
 end
