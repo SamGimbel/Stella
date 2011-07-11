@@ -11,46 +11,62 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <!--<div class="field">
     <%= f.label :id %><br />
     <%= f.text_field :id %>
   </div>
+	we should display the id if possible-->
+	
   <div class="field">
     <%= f.label :title %><br />
     <%= f.text_field :title %>
   </div>
-  <div class="field">
+  
+<!--<div class="field">
     <%= f.label :createdate %><br />
     <%= f.text_field :createdate %>
   </div>
-  <div class="field">
+	this should display a calendar widget instead-->
+	  
+<!--<div class="field">
     <%= f.label :image %><br />
     <%= f.text_field :image %>
   </div>
-  <div class="field">
+  <div class="field"> 
+	needs to save image, return URL-->
+	
     <%= f.label :platform %><br />
     <%= f.text_field :platform %>
   </div>
-  <div class="field">
-    <%= f.label :icon %><br />
+<!--is a drop-down -->
+	
+<!--<div class="field">
+	<%= f.label :icon %><br />
     <%= f.text_field :icon %>
   </div>
+	needs to save image, return URL-->
+	
   <div class="field">
     <%= f.label :link %><br />
     <%= f.text_field :link %>
   </div>
-  <div class="field">
+  
+<!--><div class="field">
     <%= f.label :tagid %><br />
     <%= f.text_field :tagid %>
-  </div>
+  </div>-->
+
   <div class="field">
     <%= f.label :tag %><br />
     <%= f.text_field :tag %>
   </div>
-  <div class="field">
+
+  <!--<div class="field">
     <%= f.label :size %><br />
     <%= f.text_field :size %>
   </div>
+this is auto-generated-->
+
   <div class="actions">
     <%= f.submit %>
   </div>
