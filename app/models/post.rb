@@ -1,3 +1,5 @@
+require 'paperclip'
+
 class Post < ActiveRecord::Base
   validates :title,       :presence => true,
                           :length => { :minimum => 5 }
@@ -6,7 +8,8 @@ class Post < ActiveRecord::Base
   validates :icon,        :presence => true
   validates :link,        :presence => true
   
-  belongs_to :post
-  has_attached_file :image, :storage => :database
+  belongs_to :user
+  
+  has_attached_file :image, :styles => { :medium => "500x500>", :thumb => "100x100>" }
   
 end

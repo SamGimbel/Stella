@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110703225604) do
+ActiveRecord::Schema.define(:version => 20110712180349) do
 
   create_table "list_views", :force => true do |t|
     t.integer  "postid"
@@ -29,15 +29,21 @@ ActiveRecord::Schema.define(:version => 20110703225604) do
     t.string   "title"
     t.string   "publishdate"
     t.string   "createdate"
-    t.string   "image"
     t.string   "platform"
-    t.string   "icon"
     t.string   "link"
     t.integer  "tagid"
     t.string   "tag"
     t.string   "size"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
+    t.string   "icon_file_name"
+    t.string   "icon_content_type"
+    t.integer  "icon_file_size"
+    t.datetime "icon_updated_at"
   end
 
   create_table "users", :force => true do |t|
