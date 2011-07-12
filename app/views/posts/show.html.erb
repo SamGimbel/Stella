@@ -17,7 +17,9 @@
 
 <p>
   <b>Image:</b>
-  <%= render @post.image %>
+  	<%= image_tag @post.image.url %>
+	<!--<%= image_tag @post.image.url(:medium) %>-->
+	<%= image_tag @post.image.url(:thumb) %>
 </p>
 
 <p>
@@ -26,8 +28,14 @@
 </p>
 
 <p>
+<<<<<<< Updated upstream
   <b>Icon:</b> 
   <%= @post.icon %>
+=======
+  <b>Icon:</b>
+  	<%= image_tag @post.icon.url %>
+	<!--<%= image_tag @post.icon.url(:small) %>-->
+>>>>>>> Stashed changes
 </p>
 
 <p>
