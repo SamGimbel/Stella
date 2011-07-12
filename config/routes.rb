@@ -2,7 +2,7 @@ Stella::Application.routes.draw do
   resources :list_views
 
   resources :users
-
+ 
   resources :posts
 
   get "home/index"

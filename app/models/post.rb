@@ -1,6 +1,6 @@
 require 'paperclip'
 
-class Post < ActiveRecord::Base
+class Post < ActiveRecord::Base 
   validates :title,       :presence => true,
                           :length => { :minimum => 5 }
   validates :image,       :presence => true
