@@ -1,12 +1,16 @@
 Stella::Application.routes.draw do
-  resources :list_views
-
-  resources :users
- 
-  resources :posts
-
   get "home/index"
+  get "sign_up" => "users#new", :as => "sign_up"
+  get "log_in" => "sessions#new", :as => "log_in"
+  get "log_out" => "sessions#destroy", :as => "log_out"
+  root :to => "home#index"
+  
+  resources :list_views
+  resources :users
+  resources :posts
+  resources :sessions
 
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
@@ -56,7 +60,7 @@ Stella::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  root :to => "home#index"
+ 
 
   # See how all your routes lay out with "rake routes"
 

@@ -1,4 +1,4 @@
-class User update < ActiveRecord::Migration
+class UserUpdate < ActiveRecord::Migration
   def self.up
     remove_column :users, :lastpost
     add_column :users, :username, :string

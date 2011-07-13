@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110712180349) do
+ActiveRecord::Schema.define(:version => 20110713203655) do
 
   create_table "list_views", :force => true do |t|
     t.integer  "postid"
@@ -50,9 +50,11 @@ ActiveRecord::Schema.define(:version => 20110712180349) do
     t.string   "firstname"
     t.string   "lastname"
     t.integer  "status"
-    t.string   "lastpost"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "username"
+    t.string   "password_hash"
+    t.string   "password_salt"
   end
 
 end

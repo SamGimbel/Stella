@@ -4,8 +4,8 @@
   <tr>
     <th>Firstname</th>
     <th>Lastname</th>
+    <th>Username</th>
     <th>Status</th>
-    <th>Lastpost</th>
     <th></th>
     <th></th>
     <th></th>
@@ -15,8 +15,8 @@
   <tr>
     <td><%= user.firstname %></td>
     <td><%= user.lastname %></td>
+    <td><%= user.username %></td>
     <td><%= user.status %></td>
-    <td><%= user.lastpost %></td>
     <td><%= link_to 'Show', user %></td>
     <td><%= link_to 'Edit', edit_user_path(user) %></td>
     <td><%= link_to 'Destroy', user, :confirm => 'Are you sure?', :method => :delete %></td>

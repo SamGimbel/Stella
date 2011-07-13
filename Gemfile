@@ -8,6 +8,7 @@ gem 'rails', '3.0.9'
 gem 'sqlite3'
 gem 'paperclip'
 gem 'aws-s3'
+gem 'bcrypt-ruby', :require => 'bcrypt'
 
 # Use unicorn as the web server
 # gem 'unicorn'
