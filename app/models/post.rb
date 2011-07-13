@@ -8,9 +8,14 @@ class Post < ActiveRecord::Base
   validates :icon,        :presence => true
   validates :link,        :presence => true
   
-  # belongs_to :user
+  belongs_to :user
   
-  has_attached_file :image, :styles => { :medium => "500x500>", :thumb => "100x100>" }
-  has_attached_file :icon, :styles => { :small => "50x50>" }
-  
+  has_attached_file :image, :styles => { :medium => "500x500>", :thumb => "100x100>" }, 
+      :storage => :s3,
+      :s3_credentials => "#{RAILS_ROOT}/config/s3.yml",
+      :path => "/:style/:id/:filename"
+  has_attached_file :icon, :styles => { :small => "50x50>" },      
+      :storage => :s3,
+      :s3_credentials => "#{RAILS_ROOT}/config/s3.yml",
+      :path => "/:style/:id/:filename"
 end
