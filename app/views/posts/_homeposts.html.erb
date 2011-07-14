@@ -1,0 +1,42 @@
+<% stream_posts.each do |post| %>
+<p>
+  <b>Id:</b>
+  <%= post.id %>
+</p>
+
+<p>
+  <b>Title:</b>
+  <%= post.title %>
+</p>
+
+<p>
+  <b>Image:</b>
+  	<%= image_tag post.image.url %>
+	<!--<%= image_tag post.image.url(:medium) %>-->
+	<!-- <%= image_tag post.image.url(:thumb) %>-->
+</p>
+
+<p>
+  <b>Platform:</b>
+  <%= post.platform %>
+</p>
+
+<p>
+
+  <b>Icon:</b>
+  	<%= image_tag post.icon.url %>
+	<!--<%= image_tag post.icon.url(:small) %>-->
+
+</p>
+
+<p>
+  <b>Link:</b>
+  <%= post.link %>
+</p>
+
+<p>
+  <b>Tag:</b>
+  <%= post.tag %>
+</p>
+
+<% end %>
