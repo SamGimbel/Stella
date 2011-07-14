@@ -2,12 +2,16 @@ class UsersController < ApplicationController
   # GET /users
   # GET /users.xml
   def index
+    if current_user
     @users = User.all
 
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @users }
     end
+  else
+    redirect_to root_url
+  end
   end
 
   # GET /users/1
