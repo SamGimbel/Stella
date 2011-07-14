@@ -3,17 +3,18 @@ class PostsController < ApplicationController
   # GET /posts.xml
   def index
     
-    if @current_user
+    if current_user
         @posts = Post.all
 
         respond_to do |format|
           format.html # index.html.erb
           format.xml  { render :xml => @posts }
         end
-      end
     else
       redirect_to root_url
     end
+  end
+  
 
   # GET /posts/1
   # GET /posts/1.xml
@@ -30,19 +31,21 @@ class PostsController < ApplicationController
   # GET /posts/new.xml
   def new
     
-    if @current_user
+    if current_user
         @post = Post.new
 
         respond_to do |format|
           format.html # new.html.erb
           format.xml  { render :xml => @post }
         end
+      else
+        redirect_to root_url
       end
     end
 
   # GET /posts/1/edit
   def edit
-    if @current_user
+    if current_user
       @post = Post.find(params[:id])
     end
   end
@@ -50,7 +53,7 @@ class PostsController < ApplicationController
   # POST /posts
   # POST /posts.xml
   def create
-    if @current_user
+    if current_user
         @post = Post.new(params[:post]) 
 
         respond_to do |format|
@@ -62,6 +65,8 @@ class PostsController < ApplicationController
             format.xml  { render :xml => @post.errors, :status => :unprocessable_entity }
           end
         end
+    else
+      redirect_to root_url
     end
       
   end
@@ -79,13 +84,14 @@ class PostsController < ApplicationController
         format.html { render :action => "edit" }
         format.xml  { render :xml => @post.errors, :status => :unprocessable_entity }
       end
+      
     end
   end
 
   # DELETE /posts/1
   # DELETE /posts/1.xml
   def destroy
-    if :user_id
+    if current_user
         @post = Post.find(params[:id])
         @post.destroy
 
@@ -93,6 +99,8 @@ class PostsController < ApplicationController
           format.html { redirect_to(posts_url) }
           format.xml  { head :ok }
         end
-      end
+    else
+      redirect_to root_url
     end
+  end
 end
