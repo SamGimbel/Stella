@@ -1,4 +1,6 @@
 class User < ActiveRecord::Base
+  has_many :posts
+  
   attr_accessible :username, :password
   
   attr_accessor :password
@@ -26,5 +28,5 @@ class User < ActiveRecord::Base
     end
   end
   
-  has_many :posts
+  
 end
