@@ -44,7 +44,7 @@ class UsersController < ApplicationController
   # POST /users
   # POST /users.xml
   def create
-    @user = User.new(params[:user])
+    @user = User.create(params[:user])
 
     respond_to do |format|
       if @user.save
@@ -54,7 +54,7 @@ class UsersController < ApplicationController
         format.html { render :action => "new" }
         format.xml  { render :xml => @user.errors, :status => :unprocessable_entity }
       end
-    end
+    end   
   end
 
   # PUT /users/1
